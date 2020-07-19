@@ -13,7 +13,7 @@ app.use(express.json());
 
 // connection flags for new mongo db driver
 mongoose.connect(
-  "mongodb+srv://gag7:ronaldo786@yelp-ixz5i.mongodb.net/Company?retryWrites=true&w=majority",
+  "",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
