@@ -12,12 +12,15 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-dotenv.config({ path: path.resolve(_dirname, "./.env") });
-
-const uri = process.env.URL;
-
-// connection flags for new mongo db driver
-mongoose.connect({ uri, useNewUrlParser: true, useUnifiedTopology: true });
+const {
+  parsed: { URL: URL },
+} = dotenv.config();
+console.log(URL);
+// database
+mongoose.connect(URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const connection = mongoose.connection;
 connection.once("open", () => {

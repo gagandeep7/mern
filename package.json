@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "cjs": true,
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
@@ -16,6 +17,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.24",
-    "moongoose": "0.0.5"
+    "moongoose": "0.0.5",
+    "path": "^0.12.7"
   }
 }
