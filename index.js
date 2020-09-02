@@ -3,6 +3,7 @@ import cors from "cors";
 import path from "path";
 import router from "./user.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -11,7 +12,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+dotenv.config({ path: path.resolve(__dirname, "./.env") });
 
 const uri = process.env.URL;
 
