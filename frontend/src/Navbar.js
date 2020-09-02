@@ -34,7 +34,7 @@ const Navbar = () => {
           color: "#ffc107",
           margin: "0 1rem",
         }}
-        to="/show"
+        to="/listCompany"
       >
         Show
       </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
           textDecoration: "none",
           color: "#ffc107",
         }}
-        to="/add"
+        to="/addCompany"
       >
         Add
       </Link>
