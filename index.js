@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-dotenv.config({ path: path.resolve(__dirname, "./.env") });
+dotenv.config({ path: path.resolve(_dirname, "./.env") });
 
 const uri = process.env.URL;
 
