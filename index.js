@@ -3,7 +3,6 @@ import cors from "cors";
 import path from "path";
 import router from "./user.js";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,12 +11,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const {
-  parsed: { URL: URL },
-} = dotenv.config();
-console.log(URL);
 // database
-mongoose.connect(URL, {
+mongoose.connect(process.env.uri {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
